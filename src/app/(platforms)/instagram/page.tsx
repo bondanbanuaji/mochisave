@@ -59,7 +59,7 @@ export default function InstagramDownloaderPage() {
                   <div className="badge badge-secondary">Step 2</div>
                   <h3 className="font-bold">Copy Link</h3>
                   <p className="text-sm text-gray-600">
-                    Tap the three dots and select "Copy Link"
+                    Tap the three dots and select &quot;Copy Link&quot;
                   </p>
                 </div>
               </div>

@@ -86,7 +86,7 @@ export default function PrivacyPage() {
         </section>
 
         <section className="mb-8">
-          <h2>7. Children's Privacy</h2>
+          <h2>7. Children&apos;s Privacy</h2>
           <p>
             MochiSave is not intended for users under 13 years old. We do not knowingly collect information from children.
           </p>

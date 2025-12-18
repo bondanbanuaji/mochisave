@@ -1,141 +1,140 @@
-# Contributing to MochiSave
+# Kontribusi ke MochiSave
 
-First off, thank you for considering contributing to MochiSave! It's people like you that make MochiSave such a great tool.
+Terima kasih sudah mempertimbangkan untuk berkontribusi! Kontribusi Anda membuat MochiSave semakin bermanfaat.
 
-## 📋 Table of Contents
+## 📋 Daftar Isi
 
-- [Code of Conduct](#code-of-conduct)
-- [Getting Started](#getting-started)
-- [Development Process](#development-process)
-- [Pull Request Process](#pull-request-process)
-- [Coding Standards](#coding-standards)
-- [Commit Guidelines](#commit-guidelines)
+- [Kode Etik](#kode-etik)
+- [Mulai Cepat](#mulai-cepat)
+- [Proses Pengembangan](#proses-pengembangan)
+- [Proses Pull Request](#proses-pull-request)
+- [Standar Kode](#standar-kode)
+- [Panduan Commit](#panduan-commit)
 
-## 📜 Code of Conduct
+## 📜 Kode Etik
 
-This project and everyone participating in it is governed by our Code of Conduct. By participating, you are expected to uphold this code.
+Proyek ini mengikuti Kode Etik. Dengan berpartisipasi Anda diharapkan mematuhinya.
 
-## 🚀 Getting Started
+## 🚀 Mulai Cepat
 
-1. **Fork the repository**
-2. **Clone your fork**
+1. **Fork repository**
+2. **Clone fork Anda**
    ```bash
    git clone https://github.com/your-username/mochisave.git
    cd mochisave
    ```
 
-3. **Install dependencies**
+3. **Install dependensi**
    ```bash
    npm install
    ```
 
-4. **Setup environment**
+4. **Siapkan environment**
    ```bash
    cp .env.example .env.local
-   # Edit .env.local with your credentials
+   # Edit .env.local dengan kredensial Anda
    ```
 
-5. **Setup database**
+5. **Siapkan database**
    ```bash
    npx prisma generate
    npx prisma migrate dev
    ```
 
-6. **Start development server**
+6. **Jalankan development server**
    ```bash
    npm run dev
    ```
 
-## 🔄 Development Process
+## 🔄 Proses Pengembangan
 
-### Branch Naming
+### Penamaan Branch
 
-- `feature/description` - New features
-- `fix/description` - Bug fixes
-- `docs/description` - Documentation updates
-- `refactor/description` - Code refactoring
-- `test/description` - Adding tests
+- `feature/deskripsi` - Fitur baru
+- `fix/deskripsi` - Perbaikan bug
+- `docs/deskripsi` - Pembaruan dokumentasi
+- `refactor/deskripsi` - Refaktor kode
+- `test/deskripsi` - Penambahan tes
 
-Example: `feature/add-pinterest-support`
+Contoh: `feature/tambah-pinterest`
 
-### Making Changes
+### Membuat Perubahan
 
-1. Create a new branch
+1. Buat branch baru
    ```bash
-   git checkout -b feature/your-feature-name
+   git checkout -b feature/nama-fitur
    ```
 
-2. Make your changes
-3. Test your changes thoroughly
-4. Commit your changes (see commit guidelines)
-5. Push to your fork
-6. Open a Pull Request
+2. Lakukan perubahan Anda
+3. Uji perubahan dengan baik
+4. Commit perubahan (ikuti panduan commit)
+5. Push ke fork Anda
+6. Buka Pull Request
 
-## 📤 Pull Request Process
+## 📤 Proses Pull Request
 
-1. **Update documentation** - If you've added new features, update the README.md
-2. **Add tests** - Add tests for new features when applicable
-3. **Follow code style** - Ensure your code follows our coding standards
-4. **Update CHANGELOG** - Add your changes to CHANGELOG.md
-5. **One feature per PR** - Keep PRs focused on a single feature or fix
-6. **Descriptive PR title** - Use clear, descriptive titles
+1. **Perbarui dokumentasi** - Jika ada fitur baru, perbarui README.md
+2. **Tambahkan tes** - Sertakan tes untuk fitur baru bila relevan
+3. **Ikuti gaya kode** - Pastikan sesuai standar proyek
+4. **Perbarui CHANGELOG** - Tambahkan perubahan Anda
+5. **Satu fitur per PR** - Fokus pada satu perubahan
+6. **Judul PR deskriptif** - Gunakan judul yang jelas
 
-### PR Template
+### Template PR
 
 ```markdown
-## Description
-Brief description of changes
+## Deskripsi
+Ringkas perubahan yang dibuat
 
-## Type of Change
+## Jenis Perubahan
 - [ ] Bug fix
-- [ ] New feature
+- [ ] Fitur baru
 - [ ] Breaking change
-- [ ] Documentation update
+- [ ] Pembaruan dokumentasi
 
-## Testing
-How has this been tested?
+## Pengujian
+Bagaimana Anda menguji perubahan ini?
 
-## Screenshots (if applicable)
-Add screenshots here
+## Screenshot (jika ada)
+Tambahkan screenshot di sini
 
 ## Checklist
-- [ ] My code follows the style guidelines
-- [ ] I have performed a self-review
-- [ ] I have commented my code where needed
-- [ ] I have updated the documentation
-- [ ] My changes generate no new warnings
-- [ ] I have added tests
+- [ ] Kode mengikuti panduan gaya
+- [ ] Self-review dilakukan
+- [ ] Ada komentar seperlunya
+- [ ] Dokumentasi diperbarui
+- [ ] Tidak ada peringatan baru
+- [ ] Tes sudah ditambahkan
 ```
 
-## 💻 Coding Standards
+## 💻 Standar Kode
 
 ### TypeScript
 
-- Use TypeScript for all new code
-- Define proper types, avoid `any`
-- Use interfaces for object shapes
-- Export types when needed
+- Gunakan TypeScript untuk kode baru
+- Definisikan tipe dengan baik, hindari `any`
+- Gunakan interface untuk bentuk objek
+- Ekspor tipe bila diperlukan
 
 ```typescript
-// Good
+// Baik
 interface DownloadOptions {
   quality: string
   format: string
 }
 
-// Avoid
+// Hindari
 const download = (options: any) => { }
 ```
 
-### React Components
+### Komponen React
 
-- Use functional components with hooks
-- Keep components small and focused
-- Use descriptive component names
-- Props should be typed
+- Gunakan functional component dengan hooks
+- Jaga komponen kecil dan fokus
+- Gunakan nama komponen deskriptif
+- Props harus ditipkan
 
 ```typescript
-// Good
 interface ButtonProps {
   onClick: () => void
   children: ReactNode
@@ -147,45 +146,44 @@ export default function Button({ onClick, children, variant = 'primary' }: Butto
 }
 ```
 
-### File Organization
+### Organisasi Berkas
 
 ```
 src/
-├── app/              # Next.js app router pages
-├── components/       # Reusable components
-│   ├── ui/          # Basic UI components
-│   ├── layout/      # Layout components
-│   └── features/    # Feature-specific components
-├── lib/             # Utilities and helpers
+├── app/              # Halaman Next.js App Router
+├── components/       # Komponen reusable
+│   ├── ui/          # Komponen UI dasar
+│   ├── layout/      # Komponen layout
+│   └── features/    # Komponen fitur
+├── lib/             # Utilitas dan helper
 ├── hooks/           # Custom React hooks
-├── types/           # TypeScript type definitions
-└── styles/          # Global styles
+├── types/           # Definisi tipe TypeScript
+└── styles/          # Style global
 ```
 
-### Naming Conventions
+### Konvensi Penamaan
 
-- **Components**: PascalCase (`Button.tsx`, `DownloadForm.tsx`)
-- **Utilities**: camelCase (`formatDate.ts`, `validators.ts`)
-- **Hooks**: camelCase with `use` prefix (`useDownload.ts`)
-- **Constants**: UPPERCASE (`API_URL`, `MAX_FILE_SIZE`)
+- **Komponen**: PascalCase (`Button.tsx`, `DownloadForm.tsx`)
+- **Utilitas**: camelCase (`formatDate.ts`, `validators.ts`)
+- **Hooks**: camelCase dengan prefiks `use` (`useDownload.ts`)
+- **Konstanta**: UPPERCASE (`API_URL`, `MAX_FILE_SIZE`)
 
 ### CSS/Styling
 
-- Use Tailwind CSS utility classes
-- Use DaisyUI components when available
-- Keep custom CSS minimal
-- Use `clsx` for conditional classes
+- Gunakan utilitas Tailwind CSS
+- Gunakan komponen DaisyUI bila tersedia
+- Minimalkan CSS kustom
+- Gunakan `clsx` untuk conditional class
 
 ```tsx
-// Good
 <button className={clsx('btn', variant === 'primary' && 'btn-primary')}>
-  Click me
+  Klik saya
 </button>
 ```
 
-## 📝 Commit Guidelines
+## 📝 Panduan Commit
 
-### Commit Message Format
+### Format Pesan Commit
 
 ```
 <type>(<scope>): <subject>
@@ -195,114 +193,113 @@ src/
 <footer>
 ```
 
-### Types
+### Tipe
 
-- `feat`: New feature
-- `fix`: Bug fix
-- `docs`: Documentation only
-- `style`: Code style changes (formatting, etc)
-- `refactor`: Code refactoring
-- `test`: Adding tests
-- `chore`: Maintenance tasks
+- `feat`: Fitur baru
+- `fix`: Perbaikan bug
+- `docs`: Hanya dokumentasi
+- `style`: Perubahan gaya kode (formatting, dll)
+- `refactor`: Refaktor kode
+- `test`: Penambahan tes
+- `chore`: Tugas pemeliharaan
 
-### Examples
+### Contoh
 
 ```bash
-feat(download): add Instagram Reels support
+feat(download): tambah dukungan Instagram Reels
 
-Implemented scraper for Instagram Reels with HD quality support.
-Includes tests and documentation updates.
+Menambahkan scraper untuk Instagram Reels dengan dukungan kualitas HD.
+Termasuk tes dan pembaruan dokumentasi.
 
 Closes #123
 ```
 
 ```bash
-fix(api): resolve rate limiting issue
+fix(api): perbaiki isu rate limiting
 
-Fixed bug where rate limit was not being properly checked
-for authenticated users.
+Memperbaiki bug di mana rate limit tidak diperiksa dengan benar
+untuk pengguna yang telah login.
 
 Fixes #456
 ```
 
-## 🧪 Testing
+## 🧪 Pengujian
 
-### Running Tests
+### Menjalankan Tes
 
 ```bash
-# Run all tests
+# Jalankan semua tes
 npm test
 
-# Run with coverage
+# Jalankan dengan coverage
 npm run test:coverage
 
-# Run specific test
+# Jalankan tes tertentu
 npm test -- DownloadForm.test.tsx
 ```
 
-### Writing Tests
+### Menulis Tes
 
-- Write tests for new features
-- Test edge cases
-- Use descriptive test names
+- Tulis tes untuk fitur baru
+- Uji edge case
+- Gunakan nama tes yang deskriptif
 
 ```typescript
 describe('DownloadForm', () => {
-  it('should validate URL format', () => {
-    // Test implementation
+  it('memvalidasi format URL', () => {
+    // Implementasi tes
   })
 
-  it('should detect platform from URL', () => {
-    // Test implementation
+  it('mendeteksi platform dari URL', () => {
+    // Implementasi tes
   })
 })
 ```
 
-## 🐛 Reporting Bugs
+## 🐛 Pelaporan Bug
 
-### Bug Report Template
+### Template Laporan Bug
 
 ```markdown
-**Describe the bug**
-A clear description of the bug
+**Deskripsi bug**
+Jelaskan bug dengan jelas
 
-**To Reproduce**
-Steps to reproduce:
-1. Go to '...'
-2. Click on '...'
-3. See error
+**Langkah Reproduksi**
+1. Buka '...'
+2. Klik '...'
+3. Lihat error
 
-**Expected behavior**
-What you expected to happen
+**Perilaku yang Diharapkan**
+Apa yang seharusnya terjadi
 
 **Screenshots**
-If applicable, add screenshots
+Jika ada, sertakan tangkapan layar
 
 **Environment:**
-- OS: [e.g., Windows 10]
-- Browser: [e.g., Chrome 95]
-- Version: [e.g., 1.0.0]
+- OS: [mis. Windows 10]
+- Browser: [mis. Chrome 95]
+- Versi: [mis. 1.0.0]
 ```
 
-## 💡 Feature Requests
+## 💡 Permintaan Fitur
 
-We love feature requests! Please provide:
+Kami senang menerima ide fitur! Sertakan:
 
-- **Clear description** of the feature
-- **Use case** - Why is this needed?
-- **Examples** - How would it work?
-- **Alternative solutions** - Have you considered other approaches?
+- **Deskripsi jelas** dari fitur
+- **Use case** - Mengapa dibutuhkan?
+- **Contoh** - Bagaimana cara kerjanya?
+- **Alternatif** - Apakah ada pendekatan lain?
 
-## ❓ Questions?
+## ❓ Pertanyaan?
 
-- Check existing [Issues](https://github.com/yourusername/mochisave/issues)
-- Ask in [Discussions](https://github.com/yourusername/mochisave/discussions)
-- Email us at dev@mochisave.com
+- Cek [Issues](https://github.com/yourusername/mochisave/issues)
+- Tanya di [Discussions](https://github.com/yourusername/mochisave/discussions)
+- Email ke dev@mochisave.com
 
-## 🎉 Recognition
+## 🎉 Apresiasi
 
-Contributors will be added to our README.md and receive special badges!
+Kontributor akan ditambahkan ke README.md dan mendapat badge khusus!
 
 ---
 
-**Thank you for contributing to MochiSave! 🍡**
+**Terima kasih telah berkontribusi ke MochiSave! 🍡**

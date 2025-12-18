@@ -80,13 +80,13 @@ export default function TikTokDownloaderPage() {
                 <strong>Step 1:</strong> Open TikTok app and find the video you want to download
               </p>
               <p className="text-gray-600 mb-4">
-                <strong>Step 2:</strong> Tap the Share button and select "Copy Link"
+                <strong>Step 2:</strong> Tap the Share button and select &quot;Copy Link&quot;
               </p>
               <p className="text-gray-600 mb-4">
                 <strong>Step 3:</strong> Paste the link in the form above
               </p>
               <p className="text-gray-600">
-                <strong>Step 4:</strong> Choose "No Watermark" or "Audio Only" and download!
+                <strong>Step 4:</strong> Choose &quot;No Watermark&quot; or &quot;Audio Only&quot; and download!
               </p>
             </div>
           </div>

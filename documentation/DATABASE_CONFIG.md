@@ -2,13 +2,13 @@
 
 ## ✅ Port MySQL Telah Diubah
 
-Port MySQL telah diubah dari **3306** ke **3307** untuk menghindari konflik dengan instalasi MySQL lain.
+Port MySQL diganti dari **3306** ke **3307** untuk menghindari konflik dengan instalasi MySQL lain.
 
 ---
 
 ## 📝 Konfigurasi di .env.local
 
-Pastikan file `.env.local` Anda menggunakan port **3307**:
+Pastikan file `.env.local` menggunakan port **3307**:
 
 ```env
 DATABASE_URL="mysql://root:password@localhost:3307/mochisave"
@@ -27,7 +27,7 @@ DATABASE_URL="mysql://root@localhost:3307/mochisave"
 # Dengan username root dan password
 DATABASE_URL="mysql://root:mypassword@localhost:3307/mochisave"
 
-# Dengan username custom
+# Dengan username kustom
 DATABASE_URL="mysql://mochi:secret123@localhost:3307/mochisave"
 ```
 
@@ -35,7 +35,7 @@ DATABASE_URL="mysql://mochi:secret123@localhost:3307/mochisave"
 
 ## 🚀 Cara Menjalankan MySQL di Port 3307
 
-### Option 1: XAMPP
+### Pilihan 1: XAMPP
 
 1. **Buka XAMPP Control Panel**
 2. **Klik Config → my.ini** (untuk MySQL)
@@ -46,12 +46,12 @@ DATABASE_URL="mysql://mochi:secret123@localhost:3307/mochisave"
    ```
 4. **Restart MySQL** dari XAMPP Control Panel
 
-### Option 2: MySQL Standalone
+### Pilihan 2: MySQL Standalone
 
 1. **Edit konfigurasi MySQL:**
    ```bash
    # Windows
-   C:\ProgramData\MySQL\MySQL Server X.X\my.ini
+   C:\\ProgramData\\MySQL\\MySQL Server X.X\\my.ini
    
    # Linux
    /etc/mysql/my.cnf
@@ -65,7 +65,7 @@ DATABASE_URL="mysql://mochi:secret123@localhost:3307/mochisave"
 
 3. **Restart MySQL:**
    ```bash
-   # Windows (Command Prompt as Admin)
+   # Windows (Command Prompt sebagai Admin)
    net stop MySQL
    net start MySQL
    
@@ -73,7 +73,7 @@ DATABASE_URL="mysql://mochi:secret123@localhost:3307/mochisave"
    sudo systemctl restart mysql
    ```
 
-### Option 3: Docker
+### Pilihan 3: Docker
 
 ```bash
 docker run -d \
@@ -98,13 +98,13 @@ netstat -an | findstr 3307
 netstat -tuln | grep 3307
 ```
 
-### 2. Test Koneksi dengan MySQL CLI
+### 2. Tes Koneksi dengan MySQL CLI
 
 ```bash
 mysql -u root -p --port=3307 -h localhost
 ```
 
-### 3. Test Koneksi dengan Prisma
+### 3. Tes Koneksi dengan Prisma
 
 ```bash
 npx prisma db push
@@ -124,7 +124,7 @@ Jika sukses, akan muncul:
 **Solusi:**
 1. Pastikan MySQL berjalan di port 3307
 2. Cek username dan password benar
-3. Cek firewall tidak memblokir port 3307
+3. Pastikan firewall tidak memblokir port 3307
 
 ```bash
 # Cek service MySQL
@@ -161,36 +161,36 @@ npx prisma db push
 
 ---
 
-## 📊 Database Setup Lengkap
+## 📊 Setup Database Lengkap
 
-### Step-by-step Setup:
+### Langkah demi Langkah:
 
 ```bash
-# 1. Pastikan MySQL running di port 3307
+# 1. Pastikan MySQL berjalan di port 3307
 netstat -an | findstr 3307
 
 # 2. Buat database
 mysql -u root -p --port=3307 -e "CREATE DATABASE mochisave;"
 
-# 3. Copy environment file
+# 3. Salin file environment
 cp .env.example .env.local
 
-# 4. Edit .env.local dengan credentials Anda
+# 4. Edit .env.local dengan kredensial Anda
 # DATABASE_URL="mysql://root:yourpassword@localhost:3307/mochisave"
 
 # 5. Generate Prisma Client
 npx prisma generate
 
-# 6. Run migrations
+# 6. Jalankan migrasi
 npx prisma migrate dev --name init
 
-# 7. (Optional) Buka Prisma Studio
+# 7. (Opsional) Buka Prisma Studio
 npx prisma studio
 ```
 
 ---
 
-## 🎯 Quick Commands
+## 🎯 Perintah Cepat
 
 ```bash
 # Cek koneksi database
@@ -199,31 +199,31 @@ npx prisma db pull
 # Reset database
 npx prisma migrate reset
 
-# Open Prisma Studio (GUI)
+# Buka Prisma Studio (GUI)
 npx prisma studio
 
-# Check database status
+# Cek status database
 npx prisma db push --accept-data-loss
 ```
 
 ---
 
-## 🔐 Security Tips
+## 🔐 Tips Keamanan
 
 1. **Jangan commit .env.local** ke Git (sudah ada di .gitignore)
-2. **Gunakan password yang kuat** untuk production
-3. **Jangan gunakan root user** di production
-4. **Enable SSL** untuk koneksi database production
+2. **Gunakan password kuat** untuk produksi
+3. **Jangan gunakan user root** di produksi
+4. **Aktifkan SSL** untuk koneksi database produksi
 
 ---
 
-## 📞 Need Help?
+## 📞 Butuh Bantuan?
 
 Jika masih ada masalah dengan database:
 
-1. Pastikan MySQL service berjalan
-2. Cek port 3307 tidak digunakan aplikasi lain
-3. Verifikasi credentials di .env.local
-4. Test koneksi dengan MySQL CLI dulu
+1. Pastikan service MySQL berjalan
+2. Cek port 3307 tidak dipakai aplikasi lain
+3. Verifikasi kredensial di .env.local
+4. Tes koneksi dengan MySQL CLI terlebih dahulu
 
 **Semoga membantu! 🍡**

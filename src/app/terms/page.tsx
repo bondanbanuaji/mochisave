@@ -8,7 +8,7 @@ export default function TermsPage() {
         <section className="mb-8">
           <h2>1. Acceptance of Terms</h2>
           <p>
-            By accessing and using MochiSave ("Service"), you accept and agree to be bound by these Terms of Service. If you do not agree, please do not use our Service.
+            By accessing and using MochiSave (&quot;Service&quot;), you accept and agree to be bound by these Terms of Service. If you do not agree, please do not use our Service.
           </p>
         </section>
 
@@ -26,7 +26,7 @@ export default function TermsPage() {
             <li>Use the Service only for lawful purposes and personal use</li>
             <li>Respect copyright and intellectual property rights</li>
             <li>Not download private or restricted content without permission</li>
-            <li>Not use the Service to violate any platform's Terms of Service</li>
+            <li>Not use the Service to violate any platform&apos;s Terms of Service</li>
             <li>Not attempt to circumvent any security features</li>
             <li>Not abuse or overload our systems</li>
           </ul>
@@ -71,7 +71,7 @@ export default function TermsPage() {
           <h2>7. Service Limitations</h2>
           <p>We strive to provide reliable service, but:</p>
           <ul>
-            <li>The Service is provided "as is" without warranties</li>
+            <li>The Service is provided &quot;as is&quot; without warranties</li>
             <li>We do not guarantee 100% uptime or availability</li>
             <li>Download quality and availability depend on source platforms</li>
             <li>Rate limits apply to prevent abuse</li>
@@ -88,7 +88,7 @@ export default function TermsPage() {
             <li>Use automated tools to scrape or abuse the Service</li>
             <li>Attempt to reverse engineer our platform</li>
             <li>Impersonate others or provide false information</li>
-            <li>Interfere with other users' use of the Service</li>
+            <li>Interfere with other users&apos; use of the Service</li>
           </ul>
         </section>
 
@@ -141,7 +141,7 @@ export default function TermsPage() {
         <div className="bg-gradient-to-r from-primary to-secondary text-white rounded-2xl p-8 mt-12">
           <h3 className="text-2xl font-bold mb-4">Questions?</h3>
           <p className="mb-4">
-            If you have any questions about these Terms of Service, please don't hesitate to contact us.
+            If you have any questions about these Terms of Service, please don&apos;t hesitate to contact us.
           </p>
           <a href="/contact" className="btn bg-white text-primary hover:bg-gray-100 border-0">
             Contact Support

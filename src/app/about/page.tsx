@@ -23,7 +23,7 @@ export default function AboutPage() {
             About MochiSave
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            We're on a mission to make social media content accessible to everyone, everywhere.
+            We&apos;re on a mission to make social media content accessible to everyone, everywhere.
           </p>
         </div>
 

@@ -35,7 +35,7 @@ export default function ContactPage() {
             Contact Us
           </h1>
           <p className="text-xl text-gray-600">
-            Have a question? We'd love to hear from you.
+            Have a question? We&apos;d love to hear from you.
           </p>
         </div>
 
@@ -198,7 +198,7 @@ export default function ContactPage() {
               <div className="card-body">
                 <h3 className="card-title text-lg">Can I request a new feature?</h3>
                 <p className="text-gray-600">
-                  Absolutely! We love hearing from users. Select "Feature Request" in the form above.
+                  Absolutely! We love hearing from users. Select &quot;Feature Request&quot; in the form above.
                 </p>
               </div>
             </div>
@@ -207,7 +207,7 @@ export default function ContactPage() {
               <div className="card-body">
                 <h3 className="card-title text-lg">How do I report a bug?</h3>
                 <p className="text-gray-600">
-                  Use the form above and select "Bug Report". Include as much detail as possible.
+                  Use the form above and select &quot;Bug Report&quot;. Include as much detail as possible.
                 </p>
               </div>
             </div>
